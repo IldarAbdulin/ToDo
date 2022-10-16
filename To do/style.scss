@@ -1,0 +1,137 @@
+$dark: #374151;
+$darker: #1f2937;
+$darkest: #111827;
+$gray: #6b7280;
+$light: #eee;
+$pink: #ec4899;
+$purple: #8b5cf6;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $dark;
+    color: #fff;
+}
+
+input , button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+header {
+    padding: 32px 16px;
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+        font-size: 34px;
+        font-weight: 300;
+        color: $gray;
+        margin-bottom: 16px;
+    }
+    #newTaskForm {
+        display: flex;
+
+        #newTaskInput{
+            flex: 1;
+            background: $darker;
+            padding: 16px;
+            border-radius: 16px;
+            margin-right: 16px;
+            color: $light;
+            font-size: 18px;
+            &::placeholder{
+                color: $gray;
+            }
+        }
+        #newTaskSubmit{
+            color: $pink;
+            font-size: 20px;
+            font-weight: 700;
+            background-image: linear-gradient(to right, $pink , $purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: .4s;
+            &:hover{
+                opacity: .8;
+            }
+            &:active{
+                opacity: .67;
+            }
+        }
+    }
+}
+
+section{
+    flex: 1;
+    width: 90%;
+    margin: 0 auto;
+    .task-list{
+        padding: 16px;
+        h2{
+            font-size: 25px;
+            font-weight: 300;
+            color: $gray;
+            margin-bottom: 16px;
+        }
+        #tasks {
+            .task {
+                display: flex;
+                justify-content: space-between;
+                background: $darkest;
+                padding: 16px;
+                border-radius: 16px;
+                margin-bottom: 16px;
+                .content{
+                    flex: 1;
+                    .text{
+                        color: $light;
+                        font-size: 18px;
+                        width: 100%;
+                        display: block;
+                        transition: .4s;
+                        &:not(:read-only) {
+                            color: $pink;
+                        }
+                    }
+                }
+                .actions{
+                    display: flex;
+                    margin:  0 -9px;
+                    button {
+                        cursor: pointer;
+                        margin: 0 9px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        transition: .4s;
+                        &:hover{
+                            opacity: .8;
+                        }
+                        &:active{
+                            opacity: .67;
+                        }
+                    }
+                    .edit{
+                        background-image: linear-gradient(to right, $pink , $purple);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    .delete{
+                        color: crimson;
+                    }
+                }
+            }
+        }
+    }
+}

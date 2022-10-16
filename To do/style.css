@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #374151;
+  color: #fff;
+}
+
+input, button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+header {
+  padding: 32px 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 34px;
+  font-weight: 300;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+header #newTaskForm {
+  display: flex;
+}
+header #newTaskForm #newTaskInput {
+  flex: 1;
+  background: #1f2937;
+  padding: 16px;
+  border-radius: 16px;
+  margin-right: 16px;
+  color: #eee;
+  font-size: 18px;
+}
+header #newTaskForm #newTaskInput::-moz-placeholder {
+  color: #6b7280;
+}
+header #newTaskForm #newTaskInput:-ms-input-placeholder {
+  color: #6b7280;
+}
+header #newTaskForm #newTaskInput::placeholder {
+  color: #6b7280;
+}
+header #newTaskForm #newTaskSubmit {
+  color: #ec4899;
+  font-size: 20px;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+header #newTaskForm #newTaskSubmit:hover {
+  opacity: 0.8;
+}
+header #newTaskForm #newTaskSubmit:active {
+  opacity: 0.67;
+}
+
+section {
+  flex: 1;
+  width: 90%;
+  margin: 0 auto;
+}
+section .task-list {
+  padding: 16px;
+}
+section .task-list h2 {
+  font-size: 25px;
+  font-weight: 300;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+section .task-list #tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background: #111827;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+section .task-list #tasks .task .content {
+  flex: 1;
+}
+section .task-list #tasks .task .content .text {
+  color: #eee;
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+section .task-list #tasks .task .content .text:not(:-moz-read-only) {
+  color: #ec4899;
+}
+section .task-list #tasks .task .content .text:not(:read-only) {
+  color: #ec4899;
+}
+section .task-list #tasks .task .actions {
+  display: flex;
+  margin: 0 -9px;
+}
+section .task-list #tasks .task .actions button {
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+section .task-list #tasks .task .actions button:hover {
+  opacity: 0.8;
+}
+section .task-list #tasks .task .actions button:active {
+  opacity: 0.67;
+}
+section .task-list #tasks .task .actions .edit {
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section .task-list #tasks .task .actions .delete {
+  color: crimson;
+}/*# sourceMappingURL=style.css.map */
